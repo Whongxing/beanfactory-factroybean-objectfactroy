@@ -21,8 +21,8 @@ FactoryBean的接口有3个方法，1个属性
 - getObjectType()方法   获取Bean类型
 - isSingleton()方法  判断是否单例
 - 属性  和BeanFactory中“&”类似，都有一个属性，可以一起记忆，String OBJECT_TYPE_ATTRIBUTE = "factoryBeanObjectType";
-其子接口smartBeanFactory对其进行了扩展,  新增
-- isPrototype()  
+##### 其子接口smartBeanFactory对其进行了扩展,  新增
+- isPrototype()  FactoryBean管理的对象是否为prototype（原型）
 - isEagerInit()方法   如果为true的话，Spring容器会在初始化的时候加载该类
 ## 第三、什么是ObjectBean?
 源码详细分析可以看看
