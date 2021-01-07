@@ -25,4 +25,6 @@ FactoryBean的接口有3个方法，1个属性
 - isPrototype()  FactoryBean管理的对象是否为prototype（原型）
 - isEagerInit()方法   如果为true的话，Spring容器会在初始化的时候加载该类
 ## 第三、什么是ObjectBean?
-源码详细分析可以看看
+ObjectFactory是一个工厂，在调用时可以返回对象的一个实例，Spring懒加载的时候可以通过ObjectFactory实现
+源码详细分析可以参考看看
+https://www.yuque.com/docs/share/b983942b-428a-4d8e-99b8-2d3b003293ad?#（密码：if1g） 《BeanFactory、FactoryBean、ObjectFactory》
