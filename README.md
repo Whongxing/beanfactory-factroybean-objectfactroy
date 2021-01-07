@@ -13,7 +13,16 @@ BeanFactory是Spring利于工厂模式设计的一个管理SpringBean的一个�
 - 三、 获取Bean的特性,例如：BeanFactory中是否包含某个给定名称或者别名的类、BeanFactory中某个类是否是单例的、是否是给定类型
 - 四、 获取一个类的类型-getType
 总的可以理解为BeanFactory是一个最基本的容器，Spring依赖注入功能是使用BeanFactory接口及其子接口实现的。
-## 第二、什么是FactoryBean?
 
+## 第二、什么是FactoryBean?
+FactoryBean，名字就可以看出来，它是一个Bean，更直白的说，它就是一个<bean></bean>标签中的SpringBean,只不过这个bean继承了FactoryBean/或实现了其子类smartFoctoryBean接口
+FactoryBean的接口有3个方法，1个属性
+- getObject()方法  获取Bean
+- getObjectType()方法   获取Bean类型
+- isSingleton()方法  判断是否单例
+- 属性  和BeanFactory中“&”类似，都有一个属性，可以一起记忆，String OBJECT_TYPE_ATTRIBUTE = "factoryBeanObjectType";
+其子接口smartBeanFactory对其进行了扩展,  新增
+- isPrototype()  
+- isEagerInit()方法   如果为true的话，Spring容器会在初始化的时候加载该类
 ## 第三、什么是ObjectBean?
 源码详细分析可以看看
